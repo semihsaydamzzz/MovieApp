@@ -1,0 +1,47 @@
+Merhabalar Alican Bey, 
+
+Uygulamamda öncelikle fazladan yer kaplamaması için app icon'u yazı ile yapmayı tercih ettim.
+Uygulama açılırken Opacity 0.0 'dan 1.0 ' a 3 sn içersinde artacak şekilde bir animation kullandım.
+Animation üzerinde açılan Fotoğrafı PhotoShop üzerinden Loodos için uyarladım.
+
+Uygulama açılır açılmaz wifi control yapmasını sağladım. Wifi bağlantısı olmaması durumunda uygulamadan çıkış yapıldı.
+Wifi olması durumunda Login ekrana geçiş yapıldı.
+
+Login ekran kısmından sonra FireBase kullanılmaya başlandı.
+Firebase Authentication, Firabase database, Firebase Storage tek tek implement edildi. 
+Oluşturulan firebase hesabında gerekli yazma ve okuma kuralları belirlendi.
+
+Login ekranında SignUp ve SignIn butonları yardımıyla ve FireBase authentication'a kullanıcılar eklendi. 
+***Bir kullanıcı ID ve Password girdikten sonra uygulamayı kapatıp tekrar açtığında otomatik olarak Movies ekranına geçebilmeli, yani login olabilmeli düşüncesi uygulamaya yansıtıldı.
+***Yukarıda bulunan düşünce beraberinde bir sorunu getirdi. Sign Out olamama.
+
+Bir Upload Screen oluşturuldu. Bu screen bir imageView, bir plainText ve buttondan oluşmaktadır. Sırasıyla film fotoğrafı, film açıklaması ve filmi yükleme butonu şeklinde görevler görecek bu alanlar
+için tanımlamalar yapıldı. 
+
+**en zor kısmı olan filmleri alt alta göstermek için RecyclerView kısmıyla uğraşıldı. RecyclerView benim filmlerimin sıralanacağı movies screen'in tamamını kaplayacak şekilde yerleştirildi.
+RecyclerView' in içindeki her item için bir görünüm yapıldı. Bu görünüm recycler_row.xml içinde yapıldı. 
+Bu görünümleri, ve class lari birbirine bağlamak için bazı methodlar kullanıldı.
+
+Database'e verileri yazmak ve onları okuma işlemlerini öğrendim. Ve okunan verileri bir dizi halinde alıp RecyclerView'e input olarak gönderme ile uğraştım.
+
+Upload Screen'e eklenen bir menü ile Add Movie ve Sign Out seçenekleri gerçekleştirildi.
+
+Ve firebase üzerinden Database ve Storage Kısımlarındaki kuralları yazma ve okuma için herkese açık biçime getirdim.
+Böylelikle yeni üye olan bir kullanıcı bile bir film paylaşabiliyor olacaktır. 
+Film boyutu yüksek olduğu için Gallery izinleri alarak gallery üzerinden birer fotoğraf yükleme yoluna gittim.
+
+Filmi yükleyen kullanıcının e-mail bilgisi ekranda gösterildi.
+
+Filmler için bir sıralama oluşturuldu. Bu veritabanından alınan Date ile sağlandı. Query.Direction.DESCENDING kodu ile 
+yeni eklenen filmin en üstte görünmesi sağlandı.
+
+Arkaplan için gradient.xml oluşturuldu. Filmlerin fotoğraflarının kenarlarından neon ışık çıkıyormuş hissi verilmeye çalışıldı.
+
+Verdiğiniz ödevdekiyle birebir yapmadığım için üzgünüm. Fakat Özgün bir şey olmasını istedim ve daha çok database tabanlı bir uygulama oldu.
+Bunları 12 saat içerisinde yaptım.
+Bu iş için ne kadar istekli olduğumu görmenizi isterim.
+Bu app için görüşleriniz benim için çok değerli, geri dönüşleriniz ile uygulamayı geliştirmeyi çok isterim.
+
+Saygılarımla.
+
+
